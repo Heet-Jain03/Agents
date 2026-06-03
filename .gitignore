@@ -3,6 +3,8 @@
 *.db
 __pycache__/
 *.py[cod]
+*.pyc
+*.cpython-*.pyc
 .Python
 .venv/
 venv/

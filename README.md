@@ -1,5 +1,7 @@
 # Agent Marketplace — Secure Deployment Guide
 
+**GitHub:** [github.com/Heet-Jain03/Agents](https://github.com/Heet-Jain03/Agents) · **Vercel deploy:** see [DEPLOY_VERCEL.md](DEPLOY_VERCEL.md)
+
 ## What's New (Security Upgrade)
 
 - ✅ **JWT Authentication** — Login/Signup with access + refresh tokens
@@ -121,8 +123,8 @@ docker logs -f marketplace
 ### On EC2:
 ```bash
 # Clone / pull your repo
-git clone https://github.com/your-repo/agent-marketplace.git
-cd agent-marketplace
+git clone https://github.com/Heet-Jain03/Agents.git
+cd Agents
 
 # Install deps
 pip3 install -r requirements.txt

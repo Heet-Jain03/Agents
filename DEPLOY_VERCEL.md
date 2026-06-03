@@ -1,23 +1,32 @@
 # Deploy to Vercel (GitHub → Vercel)
 
+**Repository:** [github.com/Heet-Jain03/Agents](https://github.com/Heet-Jain03/Agents)
+
 ## 1. Push to GitHub
 
 ```bash
+cd c:\Users\heetj\OneDrive\Documents\MarketPlace-main
 git init
 git add .
-git commit -m "Prepare Agent Marketplace for Vercel"
+git commit -m "Add Vercel deployment configuration"
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+git remote add origin https://github.com/Heet-Jain03/Agents.git
+git push -u origin main
+```
+
+If `origin` already exists, update it instead:
+
+```bash
+git remote set-url origin https://github.com/Heet-Jain03/Agents.git
 git push -u origin main
 ```
 
 On Windows, the first commit may be on `master`; run `git branch -M main` before pushing.
-Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPO_NAME` with your real GitHub repo (create an empty repo on GitHub first).
 
 ## 2. Import in Vercel
 
 1. Go to [vercel.com](https://vercel.com) → **Add New Project**
-2. Import your GitHub repository
+2. Import **[Heet-Jain03/Agents](https://github.com/Heet-Jain03/Agents)**
 3. Framework preset: **Other** (Vercel detects `vercel.json` and Python)
 4. Root directory: project root (default)
 
@@ -40,7 +49,7 @@ Apply to **Production**, **Preview**, and **Development**.
 
 Click **Deploy**. Your app will be at:
 
-- UI: `https://YOUR_PROJECT.vercel.app/` (from `public/index.html`)
+- UI: `https://<your-vercel-project>.vercel.app/` (from `public/index.html`)
 - API: same origin (`/auth/*`, `/orchestrate`, `/agents/research`, etc.)
 
 ## 5. Notes

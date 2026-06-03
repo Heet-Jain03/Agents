@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    { "src": "/orchestrate", "dest": "/api/index.py" },
+    { "src": "/single", "dest": "/api/index.py" },
+    { "src": "/pipelines", "dest": "/api/index.py" },
+    { "src": "/health", "dest": "/api/index.py" },
+    { "src": "/auth/(.*)", "dest": "/api/index.py" },
+    { "src": "/agents/(.*)", "dest": "/api/index.py" },
+    { "src": "/api/index", "dest": "/api/index.py" },
+    { "src": "/api/index.py", "dest": "/api/index.py" }
+  ],
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60
+    }
+  }
+}

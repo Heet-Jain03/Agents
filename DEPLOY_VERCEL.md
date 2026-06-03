@@ -6,9 +6,13 @@
 git init
 git add .
 git commit -m "Prepare Agent Marketplace for Vercel"
-git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
 git push -u origin main
 ```
+
+On Windows, the first commit may be on `master`; run `git branch -M main` before pushing.
+Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPO_NAME` with your real GitHub repo (create an empty repo on GitHub first).
 
 ## 2. Import in Vercel
 
